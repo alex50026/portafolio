@@ -411,10 +411,10 @@ const App = () => {
 
       <div>
         <a
-          href="/AlexanderAponteLargachaResume.pdf"
+          href={process.env.PUBLIC_URL + '/AlexanderAponteLargachaResume.pdf'}
           download
-          style={{ textDecoration: 'none' }}
-        >
+           style={{ textDecoration: 'none' }}
+          >
           <button
             style={{
               ...styles.primaryButton,
@@ -530,7 +530,7 @@ const App = () => {
               onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
               <img
-                src={project.image}
+                src={process.env.PUBLIC_URL + project.image}
                 alt={project.title}
                 style={styles.projectImage}
               />
