@@ -50,7 +50,7 @@ const App = () => {
       title: 'AlcoholimetroIoT',
       description: 'Este proyecto es un sistema IoT que monitorea los niveles de alcohol en tiempo real utilizando un sensor MQ-3 y envía alertas a través de Telegram cuando se supera un umbral predefinido.',
       technologies: ['C++', 'C', 'Ruby', 'Python','Java'],
-      image: '/alcoholismo.png',
+      image: 'alcoholismo.png',
       github: 'https://github.com/alex50026/AlcoholimetroIoT',
       demo: '#'
     },
@@ -58,7 +58,7 @@ const App = () => {
       title: 'SplitPay',
       description: 'Este proyecto permite gestionar de forma sencilla los gastos compartidos entre grupos de personas, proporcionando funcionalidades de seguimiento, facturación, distribución de deudas y más.',
       technologies: ['Java', 'PLSQL'],
-      image: '/split-pay.png',
+      image: 'split-pay.png',
       github: 'https://github.com/alex50026/SplitPay',
       demo: '#'
     },
@@ -66,7 +66,7 @@ const App = () => {
       title: 'BikeTrack',
       description: 'El proyecto "BikeTrack" consiste en una aplicación móvil que funcione como red social y una aplicación de navegación para ciclistas, basándose en redes sociales actuales y modelos de navegación similares como ocurre con el caso de "waze".',
       technologies: ['Kotlin'],
-      image: '/bikeTrack.png',
+      image: 'bikeTrack.png',
       github: 'https://github.com/ICM2530/BikeTrack',
       demo: '#'
     }
@@ -412,8 +412,9 @@ const App = () => {
       <div>
         <a
           href={process.env.PUBLIC_URL + '/AlexanderAponteLargachaResume.pdf'}
-          download
-           style={{ textDecoration: 'none' }}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: 'none' }}
           >
           <button
             style={{
