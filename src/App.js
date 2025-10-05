@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, Phone, MapPin, Code, Briefcase, GraduationCap, User, Download, ExternalLink } from 'lucide-react';
-import alcoholismoImg from './alcoholismo.png'; 
-import splitPayImg from './split-pay.png';
-import bikeTrackImg from './bikeTrack.png';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -53,7 +50,7 @@ const App = () => {
       title: 'AlcoholimetroIoT',
       description: 'Este proyecto es un sistema IoT que monitorea los niveles de alcohol en tiempo real utilizando un sensor MQ-3 y envía alertas a través de Telegram cuando se supera un umbral predefinido.',
       technologies: ['C++', 'C', 'Ruby', 'Python','Java'],
-      image: alcoholismoImg,
+      image: '/alcoholismo.png',
       github: 'https://github.com/alex50026/AlcoholimetroIoT',
       demo: '#'
     },
@@ -61,7 +58,7 @@ const App = () => {
       title: 'SplitPay',
       description: 'Este proyecto permite gestionar de forma sencilla los gastos compartidos entre grupos de personas, proporcionando funcionalidades de seguimiento, facturación, distribución de deudas y más.',
       technologies: ['Java', 'PLSQL'],
-      image: splitPayImg ,
+      image: '/split-pay.png',
       github: 'https://github.com/alex50026/SplitPay',
       demo: '#'
     },
@@ -69,7 +66,7 @@ const App = () => {
       title: 'BikeTrack',
       description: 'El proyecto "BikeTrack" consiste en una aplicación móvil que funcione como red social y una aplicación de navegación para ciclistas, basándose en redes sociales actuales y modelos de navegación similares como ocurre con el caso de "waze".',
       technologies: ['Kotlin'],
-      image: bikeTrackImg,
+      image: '/bikeTrack.png',
       github: 'https://github.com/ICM2530/BikeTrack',
       demo: '#'
     }
@@ -534,7 +531,7 @@ const App = () => {
               onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
               <img
-                ssrc={project.image}  
+                src={`${process.env.PUBLIC_URL}${project.image}`}
                 alt={project.title}
                 style={styles.projectImage}
               />
